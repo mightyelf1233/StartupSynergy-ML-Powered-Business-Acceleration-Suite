@@ -1,0 +1,33 @@
+digraph {
+	Start
+	"Input: User Prompt"
+	Tokenization
+	"Word2Vec Embedding"
+	"Average Vector Calculation"
+	"Cosine Similarity Calculation"
+	"Recommend Category for Prompt"
+	"Input: Business Data (Categories, Investors)"
+	"One-Hot Encoding of Categories and Locations"
+	"Data Preparation"
+	"Split Data into Training and Testing Sets"
+	"Model Training (ANN, KNN, SVM)"
+	"Model Evaluation (Accuracy, Precision, Recall)"
+	Prediction
+	"Output: Recommended Investors"
+	End
+	Start -> Input:" User Prompt"
+	Input:" User Prompt" -> Tokenization
+	Tokenization -> "Word2Vec Embedding"
+	"Word2Vec Embedding" -> "Average Vector Calculation"
+	"Average Vector Calculation" -> "Cosine Similarity Calculation"
+	"Cosine Similarity Calculation" -> "Recommend Category for Prompt"
+	"Recommend Category for Prompt" -> Input:" Business Data (Categories, Investors)"
+	Input:" Business Data (Categories, Investors)" -> "One-Hot Encoding of Categories and Locations"
+	"One-Hot Encoding of Categories and Locations" -> "Data Preparation"
+	"Data Preparation" -> "Split Data into Training and Testing Sets"
+	"Split Data into Training and Testing Sets" -> "Model Training (ANN, KNN, SVM)"
+	"Model Training (ANN, KNN, SVM)" -> "Model Evaluation (Accuracy, Precision, Recall)"
+	"Model Evaluation (Accuracy, Precision, Recall)" -> Prediction
+	Prediction -> Output:" Recommended Investors"
+	Output:" Recommended Investors" -> End
+}
